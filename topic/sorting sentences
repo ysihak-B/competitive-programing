@@ -1,0 +1,16 @@
+class Solution:
+    def sortSentence(self, s: str) -> str:
+        temp1=s.split(" ")
+        nums=[]
+        temp2=[]
+        n=len(temp1)
+        for word in temp1:
+            num=word[-1]
+            nums.append(num)
+            name=word[0:-1]
+            temp2.append(name)
+        arr=[0]*(n)
+        for i in range (n):
+            arr[int(nums[i])-1]=temp2[i]
+        return ' '.join(arr)
+    
