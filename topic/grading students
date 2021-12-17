@@ -1,0 +1,13 @@
+def gradingStudents(grades):
+    result=[]
+    for i in grades:
+        if i>=38:
+            rem=i%5
+            if rem >= 3:
+                rnd=i-rem+5
+                result.append(rnd)
+            else:
+                result.append(i)
+        else:
+                result.append(i)
+    return result 
